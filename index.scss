@@ -136,14 +136,39 @@ main {
     }
 
     .bikes-container {
-      height: 60vh;
+			height: 90vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-      .bike {
-        height: 50vh;
-        width: 100vw;
-        display: grid;
-        place-items: center;
-      }
+
+      .bike-container {
+				width: 100%;
+        max-width: 21rem;
+        
+        //utility class
+        .bike {
+          transition: 1s ease-out;
+          transition-property: filter, transform;
+        }
+
+				img {
+					object-position: center;
+					object-fit: cover;
+          transform: scale(.7);
+          filter: blur(7px);
+          height: auto;
+          width: 100%;
+				}
+
+				.mid {
+					width: 100%;
+          height: auto;
+          filter: blur(0);
+          transform: scale(1);
+				}
+			}
     }
   }
 

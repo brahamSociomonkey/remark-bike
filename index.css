@@ -128,15 +128,53 @@ main #bikes .txt-container .btn-container button {
 }
 
 main #bikes .bikes-container {
-  height: 60vh;
+  height: 90vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main #bikes .bikes-container .bike {
-  height: 50vh;
-  width: 100vw;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+main #bikes .bikes-container .bike-container {
+  width: 100%;
+  max-width: 21rem;
+}
+
+main #bikes .bikes-container .bike-container .bike {
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+  -webkit-transition-property: -webkit-filter, -webkit-transform;
+  transition-property: -webkit-filter, -webkit-transform;
+  transition-property: filter, transform;
+  transition-property: filter, transform, -webkit-filter, -webkit-transform;
+}
+
+main #bikes .bikes-container .bike-container img {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+  height: auto;
+  width: 100%;
+}
+
+main #bikes .bikes-container .bike-container .mid {
+  width: 100%;
+  height: auto;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 main #organic {
