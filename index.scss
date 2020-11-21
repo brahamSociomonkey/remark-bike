@@ -136,39 +136,38 @@ main {
     }
 
     .bikes-container {
-			height: 90vh;
-			width: 100vw;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
+      height: 90vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .bike-container {
-				width: 100%;
+        width: 100%;
         max-width: 21rem;
-        
+
         //utility class
         .bike {
           transition: 1s ease-out;
           transition-property: filter, transform;
         }
 
-				img {
-					object-position: center;
-					object-fit: cover;
-          transform: scale(.7);
+        img {
+          object-position: center;
+          object-fit: cover;
+          transform: scale(0.7);
           filter: blur(7px);
           height: auto;
           width: 100%;
-				}
+        }
 
-				.mid {
-					width: 100%;
+        .mid {
+          width: 100%;
           height: auto;
           filter: blur(0);
           transform: scale(1);
-				}
-			}
+        }
+      }
     }
   }
 
@@ -247,6 +246,8 @@ main {
           height: $line-length;
           background: #000;
         }
+
+       
       }
     }
 
@@ -272,7 +273,7 @@ main {
 
     .feature {
       display: grid;
-      margin:4rem auto;
+      margin: 4rem auto;
       grid-template-areas:
         "img txt"
         "img txt";
@@ -316,6 +317,12 @@ main {
           top: 50%;
         }
 
+        @media (max-width: 650px) {
+          .horizontal-line {
+            display: none;
+          }
+        }
+
         .points > div {
           margin-top: 0.6rem;
         }
@@ -346,7 +353,7 @@ main {
     }
 
     //media query
-    @media (max-width: 40rem) {
+    @media (max-width: 680px) {
       .feature {
         grid-template-areas:
           "img img"
@@ -386,7 +393,6 @@ main {
       gap: 3rem;
 
       .icons-container {
-        padding: 1rem;
 
         .skip-img {
           background: url(./assets/skip.png);
@@ -418,7 +424,7 @@ main {
 
   #contact-form {
     text-align: center;
-    margin: 5rem 0;
+    margin: 5rem 1rem;
 
     form {
       .form-container {
@@ -556,6 +562,47 @@ footer {
     .info + .info {
       margin: 2rem 0;
     }
+  }
+}
+
+//media query
+@media (max-width: 800px) {
+  html {
+    font-size: 80%;
+  }
+
+  #challan .img-container .icons-container {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 60%;
+  }
+
+  main #contact-form form .form-container {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & > div{
+      margin: 0 2rem;
+    }
+  }
+
+}
+
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
   }
 }
 

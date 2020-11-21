@@ -324,6 +324,12 @@ main #features .feature .txt-container .horizontal-line {
   top: 50%;
 }
 
+@media (max-width: 650px) {
+  main #features .feature .txt-container .horizontal-line {
+    display: none;
+  }
+}
+
 main #features .feature .txt-container .points > div {
   margin-top: 0.6rem;
 }
@@ -348,7 +354,7 @@ main #features .feature2 .txt-container .horizontal-line {
   top: 50%;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 680px) {
   main #features .feature {
         grid-template-areas: "img img" "txt txt";
   }
@@ -392,10 +398,6 @@ main #challan .img-container {
   gap: 3rem;
 }
 
-main #challan .img-container .icons-container {
-  padding: 1rem;
-}
-
 main #challan .img-container .icons-container .skip-img {
   background: url(./assets/skip.png);
   width: 100px;
@@ -426,7 +428,7 @@ main #challan .img-container .icons-container .ion-des {
 
 main #contact-form {
   text-align: center;
-  margin: 5rem 0;
+  margin: 5rem 1rem;
 }
 
 main #contact-form form .form-container {
@@ -557,4 +559,42 @@ footer .company-info .info p {
 
 footer .company-info .info + .info {
   margin: 2rem 0;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 80%;
+  }
+  #challan .img-container .icons-container {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 60%;
+  }
+  main #contact-form form .form-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main #contact-form form .form-container > div {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 }
