@@ -188,7 +188,7 @@ main {
           font-size: 2rem;
         }
 
-        h4 {
+        p {
           margin-top: 0.3rem;
           font-size: 1.2rem;
           font-weight: 500;
@@ -246,8 +246,6 @@ main {
           height: $line-length;
           background: #000;
         }
-
-       
       }
     }
 
@@ -393,7 +391,6 @@ main {
       gap: 3rem;
 
       .icons-container {
-
         .skip-img {
           background: url(./assets/skip.png);
           width: 100px;
@@ -509,7 +506,7 @@ footer {
   }
 
   .subs {
-    h2 {
+    label {
       max-width: 30ch;
       text-align: center;
     }
@@ -592,13 +589,11 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
 
-    & > div{
+    & > div {
       margin: 0 2rem;
     }
   }
-
 }
-
 
 @media (max-width: 450px) {
   html {

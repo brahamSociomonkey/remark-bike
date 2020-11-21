@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+  name="description"           
+  content="Best Electric bike with latest features ready to be a part of your family">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Revalia&display=swap"
@@ -85,7 +88,7 @@
         <div class="txt-container">
           <div class="heading-container">
             <h1>As Pollution is the problem</h1>
-            <h4>We are making things better</h4>
+            <p>We are making things better</p>
           </div>
           <div class="des-container">
             <p>
@@ -208,7 +211,7 @@
           <div class="form-container">
             <div class="left-form">
               <div class="fields">
-                <label>Name </label>
+                <label for="name">Name </label>
                 <input
                   placeholder="Enter Name"
                   type="text"
@@ -217,7 +220,7 @@
                 />
               </div>
               <div class="fields">
-                <label>City </label>
+                <label for="city">City </label>
                 <input
                   placeholder="Enter City"
                   type="text"
@@ -226,7 +229,7 @@
                 />
               </div>
               <div class="fields">
-                <label>Message </label>
+                <label for="message">Message </label>
                 <input
                   placeholder="Enter Message"
                   type="text"
@@ -238,7 +241,7 @@
 
             <div class="right-form">
               <div class="fields">
-                <label>Phone Number</label>
+                <label for="phone">Phone Number</label>
                 <input
                   placeholder="Enter Phone Number"
                   type="tel"
@@ -247,7 +250,7 @@
                 />
               </div>
               <div class="fields">
-                <label>Email Address</label>
+                <label for="email">Email Address</label>
                 <input
                   placeholder="Enter Email"
                   type="email"
@@ -257,18 +260,18 @@
               </div>
               <div class="fields">
                 <!-- attention here -->
-                <label>Found Us Through</label>
+                <label for="foundFrom">Found Us Through</label>
                 <input
                   placeholder="How you found us?"
                   type="text"
-                  name=""
-                  id=""
+                  name="foundFrom"
+                  id="foundFrom"
                 />
               </div>
             </div>
           </div>
 
-          <button type="submit">Send Enquiry</button>
+          <button  type="submit">Send Enquiry</button>
         </form>
       </section>
     </main>
@@ -286,7 +289,7 @@
       </div>
 
       <div class="subs">
-        <h2>Sign up to get promos, giveaways and product news</h2>
+        <label for="subscriber">Sign up to get promos, giveaways and product news</label for="">
         <form action="">
           <input
             placeholder="Email"
@@ -294,7 +297,7 @@
             name="subscriber"
             id="subscriber"
           />
-          <button class="sub-btn" type="submit"></button>
+          <button aria-label="subscriber" class="sub-btn" type="submit"></button>
         </form>
       </div>
 

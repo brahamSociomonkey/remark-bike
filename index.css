@@ -189,7 +189,7 @@ main #organic .txt-container .heading-container h1 {
   font-size: 2rem;
 }
 
-main #organic .txt-container .heading-container h4 {
+main #organic .txt-container .heading-container p {
   margin-top: 0.3rem;
   font-size: 1.2rem;
   font-weight: 500;
@@ -505,7 +505,7 @@ footer .company-summary h2 {
   margin-bottom: 1rem;
 }
 
-footer .subs h2 {
+footer .subs label {
   max-width: 30ch;
   text-align: center;
 }
