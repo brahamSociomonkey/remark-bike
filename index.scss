@@ -44,7 +44,7 @@ button {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -90,12 +90,12 @@ main {
         margin: 3rem 3rem;
 
         h1 {
-          font-size: 2rem;
+          font-size: 3rem;
         }
 
         p {
           margin-top: 0.4rem;
-          font-size: 1.1rem;
+          font-size: 2rem;
           color: #fff;
         }
       }
@@ -110,12 +110,12 @@ main {
     .txt-container {
       .headings {
         h1 {
-          font-size: 2rem;
+          font-size: 3rem;
         }
 
         p {
           margin: 0.1rem;
-          font-size: 1.2rem;
+          font-size: 2rem;
         }
       }
 
@@ -124,6 +124,7 @@ main {
         p {
           margin: 0 auto;
           max-width: 80ch;
+          font-size: 1.2rem;
         }
       }
 
@@ -185,12 +186,12 @@ main {
     .txt-container {
       .heading-container {
         h1 {
-          font-size: 2rem;
+          font-size: 3rem;
         }
 
         p {
           margin-top: 0.3rem;
-          font-size: 1.2rem;
+          font-size: 2rem;
           font-weight: 500;
         }
       }
@@ -199,6 +200,7 @@ main {
         p {
           max-width: 70ch;
           margin: 1rem auto;
+          font-size: 1.3rem;
         }
       }
 
@@ -207,7 +209,7 @@ main {
 
         margin: 0 auto;
         display: grid;
-        max-width: 25vw;
+        max-width: 30vw;
         width: 100%;
         grid-template-columns: 1fr 10px 1fr;
         grid-template-rows: $line-length;
@@ -228,7 +230,7 @@ main {
           }
 
           .img {
-            $units: 5rem;
+            $units: 6rem;
             width: $units;
             height: $units;
             background-position: center;
@@ -238,6 +240,7 @@ main {
 
           p {
             max-width: 20ch;
+            font-size: 1.2rem;
           }
         }
 
@@ -275,7 +278,7 @@ main {
       grid-template-areas:
         "img txt"
         "img txt";
-      max-width: 40rem;
+      max-width: 60rem;
       gap: 2rem;
       font-size: 1.3rem;
 
@@ -283,6 +286,7 @@ main {
         grid-area: img;
         max-width: 25rem;
         margin: 0 auto;
+        align-self: center;
 
         img {
           object-fit: cover;
@@ -301,8 +305,8 @@ main {
 
         .heading {
           h1 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
           }
         }
 
@@ -322,7 +326,8 @@ main {
         }
 
         .points > div {
-          margin-top: 0.6rem;
+          margin-top: 1.7rem;
+          font-size: 1.5rem;
         }
       }
     }
@@ -374,46 +379,54 @@ main {
 
     .headings {
       h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         margin-bottom: 0.5rem;
       }
 
       p {
-        font-size: 1.3rem;
+        font-size: 2.3rem;
         font-weight: 400;
       }
     }
-
     .img-container {
-      margin: 2rem auto;
       display: flex;
+      flex-wrap: wrap;
+      width: 100vw;
       justify-content: center;
       gap: 3rem;
 
       .icons-container {
-        .skip-img {
-          background: url(./assets/skip.png);
-          width: 100px;
-          height: 100%;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          position: relative;
-          padding: 2rem;
+        margin: 3rem 0;
 
-          img {
-            width: 60%;
-            object-fit: contain;
-            object-position: center;
+        .ico {
+          $unit: 14rem;
+          width: $unit;
+          height: $unit;
+          position: relative;
+          margin: 0 1rem;
+
+          & > img {
             position: absolute;
-            top: 50%;
+            width: 70%;
+            object-position: center;
+            object-fit: contain;
             left: 50%;
+            top: 50%;
             transform: translate(-50%, -50%);
+          }
+
+          .skip {
+            width: 100%;
+          }
+
+          .license-img {
+            width: 50%;
           }
         }
 
-        .ion-des {
-          margin-top: 0.5rem;
+        .icon-des {
+          font-size: 1.5rem;
+          font-weight: 600;
         }
       }
     }
@@ -432,11 +445,6 @@ main {
 
         .left-form,
         .right-form {
-          // display: flex;
-          // flex-direction: column;
-          // justify-content: center;
-          // align-items: center;
-
           .fields {
             margin: 1rem 0;
             text-align: left;
@@ -447,8 +455,8 @@ main {
             }
 
             label {
-              margin-bottom: 0.5rem;
-              font-size: 1.3rem;
+              margin-bottom: 1.5rem;
+              font-size: 1.5rem;
               font-weight: 500;
             }
 
@@ -466,8 +474,15 @@ main {
 
       button {
         margin-top: 1rem;
-        max-width: 25rem;
+        max-width: 35rem;
+        height: 3rem;
         width: 100%;
+        background: #555;
+        font-size: 1.5rem;
+
+        &:hover {
+          background: #111;
+        }
       }
     }
   }
@@ -487,14 +502,15 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  font-size: 1.3rem;
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
   }
 
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     max-width: 50ch;
     font-weight: 300;
   }
@@ -506,38 +522,45 @@ footer {
   }
 
   .subs {
-    label {
-      max-width: 30ch;
-      text-align: center;
-    }
+    text-align: center;
+    font-size: 1rem;
 
     form {
-      display: flex;
-      justify-content: center;
-      margin-top: 1.2rem;
-
-      input {
-        font-size: 1rem;
-        margin: 1rem 0;
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #000;
-        background: none;
+      label {
+        max-width: 30ch;
+        font-size: 1.3rem;
+        text-align: center;
       }
 
-      .sub-btn {
-        background-color: transparent;
-        padding: 0;
-        background: url(./assets/arrow.png);
-        $unit: 3rem;
-        width: $unit;
-        height: $unit;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+      .sub {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.2rem;
 
-        &:hover {
-          transform: scale(0.9);
+        input {
+          font-size: 1rem;
+          margin: 1rem 0;
+          outline: none;
+          border: none;
+          background: white;
+          height: 2rem;
+        }
+
+        .sub-btn {
+          background-color: transparent;
+          padding: 0;
+          background: url(./assets/arrow.png);
+          $unit: 3rem;
+          width: $unit;
+          height: $unit;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          &:hover {
+            transform: scale(0.9);
+          }
         }
       }
     }

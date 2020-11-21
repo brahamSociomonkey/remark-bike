@@ -44,7 +44,7 @@ button:hover {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -90,12 +90,12 @@ main #hero .hero-container .txt-container {
 }
 
 main #hero .hero-container .txt-container h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 main #hero .hero-container .txt-container p {
   margin-top: 0.4rem;
-  font-size: 1.1rem;
+  font-size: 2rem;
   color: #fff;
 }
 
@@ -105,12 +105,12 @@ main #bikes {
 }
 
 main #bikes .txt-container .headings h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 main #bikes .txt-container .headings p {
   margin: 0.1rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 main #bikes .txt-container .info {
@@ -120,6 +120,7 @@ main #bikes .txt-container .info {
 main #bikes .txt-container .info p {
   margin: 0 auto;
   max-width: 80ch;
+  font-size: 1.2rem;
 }
 
 main #bikes .txt-container .btn-container button {
@@ -186,25 +187,26 @@ main #organic {
 }
 
 main #organic .txt-container .heading-container h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 main #organic .txt-container .heading-container p {
   margin-top: 0.3rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
 main #organic .txt-container .des-container p {
   max-width: 70ch;
   margin: 1rem auto;
+  font-size: 1.3rem;
 }
 
 main #organic .txt-container .eco-container {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  max-width: 25vw;
+  max-width: 30vw;
   width: 100%;
   -ms-grid-columns: 1fr 10px 1fr;
       grid-template-columns: 1fr 10px 1fr;
@@ -234,8 +236,8 @@ main #organic .txt-container .eco-container .eco .img2 {
 }
 
 main #organic .txt-container .eco-container .eco .img {
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -243,6 +245,7 @@ main #organic .txt-container .eco-container .eco .img {
 
 main #organic .txt-container .eco-container .eco p {
   max-width: 20ch;
+  font-size: 1.2rem;
 }
 
 main #organic .txt-container .eco-container .horizontal-line {
@@ -275,7 +278,7 @@ main #features .feature {
   display: grid;
   margin: 4rem auto;
       grid-template-areas: "img txt" "img txt";
-  max-width: 40rem;
+  max-width: 60rem;
   gap: 2rem;
   font-size: 1.3rem;
 }
@@ -287,6 +290,8 @@ main #features .feature .img-container {
   grid-area: img;
   max-width: 25rem;
   margin: 0 auto;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 main #features .feature .img-container img {
@@ -311,8 +316,8 @@ main #features .feature .txt-container {
 }
 
 main #features .feature .txt-container .heading h1 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 main #features .feature .txt-container .horizontal-line {
@@ -331,7 +336,8 @@ main #features .feature .txt-container .horizontal-line {
 }
 
 main #features .feature .txt-container .points > div {
-  margin-top: 0.6rem;
+  margin-top: 1.7rem;
+  font-size: 1.5rem;
 }
 
 main #features .feature2 {
@@ -378,52 +384,63 @@ main #challan {
 }
 
 main #challan .headings h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 
 main #challan .headings p {
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   font-weight: 400;
 }
 
 main #challan .img-container {
-  margin: 2rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   gap: 3rem;
 }
 
-main #challan .img-container .icons-container .skip-img {
-  background: url(./assets/skip.png);
-  width: 100px;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  padding: 2rem;
+main #challan .img-container .icons-container {
+  margin: 3rem 0;
 }
 
-main #challan .img-container .icons-container .skip-img img {
-  width: 60%;
-  -o-object-fit: contain;
-     object-fit: contain;
+main #challan .img-container .icons-container .ico {
+  width: 14rem;
+  height: 14rem;
+  position: relative;
+  margin: 0 1rem;
+}
+
+main #challan .img-container .icons-container .ico > img {
+  position: absolute;
+  width: 70%;
   -o-object-position: center;
      object-position: center;
-  position: absolute;
-  top: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
   left: 50%;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-main #challan .img-container .icons-container .ion-des {
-  margin-top: 0.5rem;
+main #challan .img-container .icons-container .ico .skip {
+  width: 100%;
+}
+
+main #challan .img-container .icons-container .ico .license-img {
+  width: 50%;
+}
+
+main #challan .img-container .icons-container .icon-des {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 main #contact-form {
@@ -456,8 +473,8 @@ main #contact-form form .form-container .right-form .fields > * {
 
 main #contact-form form .form-container .left-form .fields label,
 main #contact-form form .form-container .right-form .fields label {
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -473,8 +490,15 @@ main #contact-form form .form-container .right-form .fields input {
 
 main #contact-form form button {
   margin-top: 1rem;
-  max-width: 25rem;
+  max-width: 35rem;
+  height: 3rem;
   width: 100%;
+  background: #555;
+  font-size: 1.5rem;
+}
+
+main #contact-form form button:hover {
+  background: #111;
 }
 
 footer {
@@ -488,15 +512,16 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 1rem;
+  font-size: 1.3rem;
 }
 
 footer h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 footer p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   max-width: 50ch;
   font-weight: 300;
 }
@@ -505,31 +530,40 @@ footer .company-summary h2 {
   margin-bottom: 1rem;
 }
 
-footer .subs label {
+footer .subs {
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer .subs form label {
   max-width: 30ch;
+  font-size: 1.3rem;
   text-align: center;
 }
 
-footer .subs form {
+footer .subs form .sub {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 1.2rem;
 }
 
-footer .subs form input {
+footer .subs form .sub input {
   font-size: 1rem;
   margin: 1rem 0;
   outline: none;
   border: none;
-  border-bottom: 1px solid #000;
-  background: none;
+  background: white;
+  height: 2rem;
 }
 
-footer .subs form .sub-btn {
+footer .subs form .sub .sub-btn {
   background-color: transparent;
   padding: 0;
   background: url(./assets/arrow.png);
@@ -540,7 +574,7 @@ footer .subs form .sub-btn {
   background-repeat: no-repeat;
 }
 
-footer .subs form .sub-btn:hover {
+footer .subs form .sub .sub-btn:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
