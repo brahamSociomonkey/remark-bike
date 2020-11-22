@@ -128,9 +128,7 @@ main #bikes .txt-container .btn-container button {
   border-radius: 15px;
 }
 
-main #bikes .bikes-container {
-  min-height: 100vh;
-  width: 100vw;
+main #bikes .slider-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,24 +138,28 @@ main #bikes .bikes-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 10rem 0;
 }
 
-main #bikes .bikes-container .bike-container {
+main #bikes .slider-container .bikes-container {
+  position: relative;
+  padding: 4rem 0;
+}
+
+main #bikes .slider-container .bikes-container .bike-container {
   width: 100%;
   max-width: 30rem;
-  position: relative;
-}
-
-main #bikes .bikes-container .bike-container .img-container {
-  -webkit-transition: 1s cubic-bezier(0, 1.03, 0.52, 1);
-  transition: 1s cubic-bezier(0, 1.03, 0.52, 1);
+  -webkit-transition: 2s cubic-bezier(0, 1.03, 0.52, 1);
+  transition: 2s cubic-bezier(0, 1.03, 0.52, 1);
   -webkit-transition-property: -webkit-filter, -webkit-transform;
   transition-property: -webkit-filter, -webkit-transform;
   transition-property: filter, transform;
   transition-property: filter, transform, -webkit-filter, -webkit-transform;
 }
 
-main #bikes .bikes-container .bike-container .img-container img {
+main #bikes .slider-container .bikes-container .bike-container .img-container img {
   -webkit-transition: 1s cubic-bezier(0, 1.03, 0.52, 1);
   transition: 1s cubic-bezier(0, 1.03, 0.52, 1);
   -webkit-transition-property: -webkit-filter, -webkit-transform;
@@ -179,32 +181,46 @@ main #bikes .bikes-container .bike-container .img-container img {
   z-index: -1;
 }
 
-main #bikes .bikes-container .bike-container .front {
+main #bikes .slider-container .bikes-container .bike-container h2 {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  margin-top: 18rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main #bikes .slider-container .bikes-container .front {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   z-index: 10;
 }
 
-main #bikes .bikes-container .bike-container .unactive {
+main #bikes .slider-container .bikes-container .unactive {
   pointer-events: none;
   -webkit-animation: fadeOut 0.2s ease forwards;
           animation: fadeOut 0.2s ease forwards;
 }
 
-main #bikes .bikes-container .bike-container .passive {
+main #bikes .slider-container .bikes-container .passive {
   pointer-events: all;
 }
 
-main #bikes .bikes-container .bike-container .l1 {
+main #bikes .slider-container .bikes-container .l1 {
   -webkit-transform: translateX(-22rem);
           transform: translateX(-22rem);
   -webkit-filter: blur(2px);
           filter: blur(2px);
+  z-index: 5;
 }
 
-main #bikes .bikes-container .bike-container .r1 {
+main #bikes .slider-container .bikes-container .r1 {
   -webkit-transform: translateX(22rem);
           transform: translateX(22rem);
+  z-index: 5;
   -webkit-filter: blur(2px);
           filter: blur(2px);
 }

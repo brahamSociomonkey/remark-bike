@@ -1,7 +1,7 @@
 //accesing the bike
 
 const bikes = document.querySelectorAll(
-  "main #bikes .bikes-container .bike-container .img-container"
+  "main #bikes .bikes-container .bike-container"
 );
 
 const getElement = (num, sign, unit) => {
@@ -24,21 +24,21 @@ const getElement = (num, sign, unit) => {
   }
 
   return document.querySelectorAll(
-    `main #bikes .bikes-container .bike-container [data-num="${expression}"]`
+    `main #bikes .bikes-container [data-num="${expression}"]`
   )[0];
 };
 
 const animateBikes = (e) => {
-	let { num } = e.target.closest(".img-container").dataset;
+  let { num } = e.target.closest(".bike-container").dataset;
   const l1 = getElement(num, "-", 1);
   const r1 = getElement(num, "+", 1);
   const current = document.querySelector(
-    `main #bikes .bikes-container .bike-container [data-num="${num}"]`
+    `main #bikes .bikes-container [data-num="${num}"]`
   );
 
-  current.className = `img-container front`;
-  l1.className = `img-container l1 passive`;
-  r1.className = `img-container r1 passive`;
+  current.className = `bike-container front`;
+  l1.className = `bike-container l1 passive`;
+  r1.className = `bike-container r1 passive`;
 
   bikes.forEach((bike) => {
     if (
@@ -48,24 +48,39 @@ const animateBikes = (e) => {
     )
       return;
     else {
-      bike.className = `img-container unactive`;
+      bike.className = `bike-container unactive`;
     }
   });
-}
+};
 
 const handleClick = (e) => {
-  animateBikes(e)
+  animateBikes(e);
+};
+
+let t = undefined;
+const handleMouseDown = (e) => {
+  clearInterval(t);
+  t = undefined;
+
+  setTimeout(() => {
+    startInterval();
+  }, 5000);
+};
+
+const startInterval = () => {
+  let i = 0;
+  if (t) return;
+  t = setInterval(() => {
+    if (bikes[i]) {
+      bikes[i++].click();
+    } else i = 0;
+  }, 3500);
 };
 
 //adding eventListener
 bikes.forEach((bike) => {
   bike.addEventListener("click", handleClick);
+  bike.addEventListener("mousedown", handleMouseDown);
 });
-
-// console.log(bikes)
-
-// setInterval(() => {
-// 	bikes
-// }, 200);
-
-//    transform: ;
+startInterval();
+bikes[7].click()
