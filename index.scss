@@ -105,7 +105,7 @@ main {
   // #bikes
   #bikes {
     text-align: center;
-    margin: 3rem 0;
+    margin: 5rem 0;
 
     .txt-container {
       .headings {
@@ -137,7 +137,7 @@ main {
     }
 
     .bikes-container {
-      height: 90vh;
+      min-height: 100vh;
       width: 100vw;
       display: flex;
       justify-content: center;
@@ -145,28 +145,64 @@ main {
 
       .bike-container {
         width: 100%;
-        max-width: 21rem;
+        max-width: 30rem;
+        position: relative;
 
-        //utility class
-        .bike {
-          transition: 1s ease-out;
+        .img-container {
+          transition: 1s cubic-bezier(0, 1.03, 0.52, 1);
           transition-property: filter, transform;
+
+          img {
+            transition: 1s cubic-bezier(0, 1.03, 0.52, 1);
+            transition-property: filter, transform;
+            object-position: center;
+            object-fit: cover;
+            height: auto;
+            width: 25rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            z-index: -1;
+          }
         }
 
-        img {
-          object-position: center;
-          object-fit: cover;
-          transform: scale(0.7);
-          filter: blur(7px);
-          height: auto;
-          width: 100%;
+        //utility classes
+        .front {
+          transform: scale(1.5);
+          z-index: 10;
         }
 
-        .mid {
-          width: 100%;
-          height: auto;
-          filter: blur(0);
-          transform: scale(1);
+        .unactive {
+          pointer-events: none;
+          animation: fadeOut 0.2s ease forwards;
+        }
+
+        .passive {
+          pointer-events: all;
+        }
+
+        $unit: 22rem;
+        .l1 {
+          transform: translateX(-#{$unit});
+          filter: blur(2px);
+        }
+
+        .r1 {
+          transform: translateX(#{$unit});
+
+          filter: blur(2px);
+        }
+
+        @keyframes fadeOut {
+          from {
+            opacity: 1;
+          }
+
+          to {
+            opacity: 0;
+          }
         }
       }
     }
