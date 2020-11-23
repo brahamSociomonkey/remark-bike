@@ -93,6 +93,7 @@ main {
         h1 {
           font-size: 3rem;
           font-weight: normal;
+          width: 90%;
         }
 
         p {
@@ -109,7 +110,7 @@ main {
   #bikes {
     text-align: center;
     margin: 5rem 0;
-    overflow-x: hidden;
+    overflow: hidden;
 
     .txt-container {
       .headings {
@@ -256,7 +257,6 @@ main {
   }
 
   #organic {
-    min-height: 70vh;
     text-align: center;
     padding: 2rem 0;
     background: linear-gradient(
@@ -296,6 +296,7 @@ main {
         grid-template-columns: 1fr 10px 1fr;
         grid-template-rows: $line-length;
         align-items: center;
+        justify-content: center;
         gap: 20%;
 
         .eco {
@@ -724,6 +725,7 @@ footer {
     #bikes {
       .slider-container {
         margin: 0;
+        min-height: 75vh;
       }
     }
   }
