@@ -537,7 +537,7 @@ main #challan .img-container .icons-container .ico .license-img {
 }
 
 main #challan .img-container .icons-container .icon-des {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -739,6 +739,9 @@ footer .company-info .info + .info {
   html {
     font-size: 60%;
   }
+  main #bikes .txt-container .info p {
+    width: 80%;
+  }
   main #bikes .slider-container {
     margin: 0;
     min-height: 75vh;
@@ -765,12 +768,22 @@ footer .company-info .info + .info {
         align-content: center;
     text-align: center;
   }
+  footer h2,
+  footer label {
+    font-size: 1.9rem;
+  }
+  footer p {
+    font-size: 1.5rem;
+  }
+  footer .company-summary p {
+    margin: 0 auto;
+  }
   footer .subs form {
     max-width: 50ch;
   }
   footer .subs form label {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-weight: 500;
   }
   footer .company-info {
