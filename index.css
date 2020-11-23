@@ -36,7 +36,7 @@ button {
   transition-property: filter, transform, color, background, -webkit-filter, -webkit-transform;
 }
 
-button:hover {
+button:hover, button:focus {
   -webkit-filter: brightness(1.3);
           filter: brightness(1.3);
   cursor: pointer;
@@ -614,7 +614,7 @@ main #contact-form form button {
   font-size: 1.3rem;
 }
 
-main #contact-form form button:hover {
+main #contact-form form button:hover, main #contact-form form button:focus {
   background: #111;
 }
 
@@ -692,9 +692,10 @@ footer .subs form .sub .sub-btn {
   background-repeat: no-repeat;
 }
 
-footer .subs form .sub .sub-btn:hover {
+footer .subs form .sub .sub-btn:hover, footer .subs form .sub .sub-btn:focus {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  background-color: #ffffff45;
 }
 
 footer .company-info {

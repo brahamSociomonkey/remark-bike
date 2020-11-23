@@ -1,5 +1,4 @@
 //accesing the bike
-
 const bikes = document.querySelectorAll(
   "main #bikes .bikes-container .bike-container"
 );
@@ -84,3 +83,38 @@ bikes.forEach((bike) => {
 });
 startInterval();
 bikes[7].click();
+
+//Handling the forms
+const data = {};
+
+const handlPayLoad = (data) => {
+  console.log(data);
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const inputs = document.querySelectorAll(
+    "#contact-form form .form-container input"
+  );
+
+  inputs.forEach((input) => {
+    const { name, value } = input;
+    data[name] = value.trim();
+  });
+
+  handlPayLoad(data);
+};
+
+const handleSub = (e) => {
+  e.preventDefault();
+  const input = document.querySelector("footer form input");
+  const { name, value } = input;
+  data[name] = value.trim();
+  handlPayLoad(data);
+};
+
+//event listener for form
+const mainForm = document.querySelector("#contact-form form");
+const subsForm = document.querySelector("footer form");
+mainForm.addEventListener("submit", handleSubmit);
+subsForm.addEventListener("submit", handleSub);
