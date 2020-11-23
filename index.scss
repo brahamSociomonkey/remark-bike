@@ -88,14 +88,17 @@ main {
       .txt-container {
         width: 100vw;
         margin: 3rem 3rem;
+        margin-top: 5rem;
 
         h1 {
           font-size: 3rem;
+          font-weight: normal;
         }
 
         p {
           margin-top: 0.4rem;
           font-size: 2rem;
+          font-weight: normal;
           color: #fff;
         }
       }
@@ -106,11 +109,13 @@ main {
   #bikes {
     text-align: center;
     margin: 5rem 0;
+    overflow-x: hidden;
 
     .txt-container {
       .headings {
         h1 {
           font-size: 3rem;
+          font-weight: 600;
         }
 
         p {
@@ -209,6 +214,34 @@ main {
           filter: blur(2px);
         }
 
+        @media (max-width: 1000px) {
+          $unit: 18rem;
+
+          .l1 {
+            transform: translateX(-#{$unit});
+          }
+
+          .r1 {
+            transform: translateX(#{$unit});
+          }
+        }
+
+        @media (max-width: 550px) {
+          $unit: 14rem;
+
+          .l1 {
+            transform: translateX(-#{$unit});
+          }
+
+          .r1 {
+            transform: translateX(#{$unit});
+          }
+
+          .front {
+            transform: scale(1.7);
+          }
+        }
+
         @keyframes fadeOut {
           from {
             opacity: 1;
@@ -255,8 +288,7 @@ main {
       }
 
       .eco-container {
-        $line-length: 15rem;
-
+        $line-length: 12rem;
         margin: 0 auto;
         display: grid;
         max-width: 30vw;
@@ -264,6 +296,7 @@ main {
         grid-template-columns: 1fr 10px 1fr;
         grid-template-rows: $line-length;
         align-items: center;
+        gap: 20%;
 
         .eco {
           justify-self: center;
@@ -280,7 +313,7 @@ main {
           }
 
           .img {
-            $units: 6rem;
+            $units: 8rem;
             width: $units;
             height: $units;
             background-position: center;
@@ -324,17 +357,17 @@ main {
 
     .feature {
       display: grid;
-      margin: 4rem auto;
+      margin: 8rem auto;
       grid-template-areas:
         "img txt"
         "img txt";
-      max-width: 60rem;
-      gap: 2rem;
+      max-width: 80rem;
+      gap: 5rem;
       font-size: 1.3rem;
 
       .img-container {
         grid-area: img;
-        max-width: 25rem;
+        max-width: 40rem;
         margin: 0 auto;
         align-self: center;
 
@@ -377,7 +410,7 @@ main {
 
         .points > div {
           margin-top: 1.7rem;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
         }
       }
     }
@@ -440,16 +473,15 @@ main {
     }
     .img-container {
       display: flex;
-      flex-wrap: wrap;
       width: 100vw;
       justify-content: center;
-      gap: 3rem;
+      gap: 8rem;
 
       .icons-container {
         margin: 3rem 0;
 
         .ico {
-          $unit: 14rem;
+          $unit: 8rem;
           width: $unit;
           height: $unit;
           position: relative;
@@ -480,6 +512,12 @@ main {
         }
       }
     }
+
+    @media (max-width: 500px) {
+      .img-container {
+        gap: 4rem;
+      }
+    }
   }
 
   #contact-form {
@@ -489,7 +527,8 @@ main {
     form {
       .form-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 14rem;
         max-width: 700px;
         margin: 2rem auto;
 
@@ -522,13 +561,25 @@ main {
         }
       }
 
+      @media (max-width: 650px) {
+        .form-container {
+          gap: 7rem;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .form-container {
+          gap: 0rem;
+        }
+      }
+
       button {
         margin-top: 1rem;
-        max-width: 35rem;
+        max-width: 30rem;
         height: 3rem;
         width: 100%;
         background: #555;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
 
         &:hover {
           background: #111;
@@ -593,7 +644,8 @@ footer {
           margin: 1rem 0;
           outline: none;
           border: none;
-          background: white;
+          background: transparent;
+          border-bottom: 1px solid black;
           height: 2rem;
         }
 
@@ -636,6 +688,16 @@ footer {
 }
 
 //media query
+@media (max-width: 900px) {
+  main {
+    #bikes {
+      .slider-container {
+        margin: 4rem 0;
+      }
+    }
+  }
+}
+
 @media (max-width: 800px) {
   html {
     font-size: 80%;
@@ -658,12 +720,45 @@ footer {
     font-size: 60%;
   }
 
+  main {
+    #bikes {
+      .slider-container {
+        margin: 0;
+      }
+    }
+  }
+
   main #contact-form form .form-container {
     flex-wrap: wrap;
     justify-content: center;
 
     & > div {
       margin: 0 2rem;
+    }
+  }
+
+  footer {
+    justify-content: center;
+    gap: 4rem;
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+
+    .subs {
+      form {
+        max-width: 50ch;
+
+        label {
+          display: inline-block;
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .company-info {
+      text-align: center;
     }
   }
 }

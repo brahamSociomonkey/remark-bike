@@ -83,4 +83,4 @@ bikes.forEach((bike) => {
   bike.addEventListener("mousedown", handleMouseDown);
 });
 startInterval();
-bikes[7].click()
+bikes[7].click();
