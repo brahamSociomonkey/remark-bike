@@ -88,13 +88,13 @@ main {
 
       .txt-container {
         width: 100vw;
-        margin: 3rem 3rem;
-        margin-top: 5rem;
+        padding: 3rem;
 
         h1 {
           font-size: 3rem;
           font-weight: normal;
           width: 90%;
+          margin-bottom: 0.5rem;
         }
 
         p {
@@ -102,6 +102,49 @@ main {
           font-size: 2rem;
           font-weight: normal;
           color: #fff;
+        }
+      }
+    }
+  }
+  @media (max-width: 769px) {
+    #hero {
+      height: auto;
+
+      .hero-container {
+        height: 90vh;
+        background: url(./assets/hero-small.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      @media (max-width: 650px) {
+        .hero-container {
+          height: 77vh;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .hero-container {
+          height: 50vh;
+        }
+      }
+
+      // @media (max-width: 450px) {
+      //   .hero-container {
+      //     height: 58vh;
+      //   }
+      // }
+
+      @media (max-width: 400px) {
+        .hero-container {
+          height: 45vh;
+        }
+      }
+
+      @media (max-width: 300px) {
+        .hero-container {
+          height: 34vh;
         }
       }
     }
@@ -185,6 +228,11 @@ main {
             margin-top: 18rem;
             width: max-content;
             transform: translate(-50%, -50%);
+
+            small {
+              margin-left: .5em;
+              font-weight: 400;
+            }
           }
         }
 
@@ -302,7 +350,7 @@ main {
 
         .eco {
           justify-self: center;
-          align-self: center;
+          align-self: start;
           display: grid;
           place-items: center;
 
@@ -343,7 +391,7 @@ main {
       .grass-img {
         width: 100vw;
         height: 10rem;
-        background: url(./assets/grass1.jpg);
+        background: url(./assets/grass.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -461,6 +509,7 @@ main {
   #challan {
     width: 100vw;
     text-align: center;
+    overflow-x: hidden;
 
     .headings {
       h1 {

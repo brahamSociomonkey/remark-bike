@@ -89,6 +89,16 @@ const data = {};
 
 const handlPayLoad = (data) => {
   console.log(data);
+  // //Backend Setup
+  // Email.send({
+  //   Host: "mail.remarkev.com",
+  //   Username: "username",
+  //   Password: "password",
+  //   To: "them@website.com",
+  //   From: "http://remarkev.com/webmail",
+  //   Subject: "This is the subject",
+  //   Body: "And this is the body",
+  // }).then((message) => alert(message));
 };
 
 const handleSubmit = (e) => {

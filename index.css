@@ -86,14 +86,14 @@ main #hero .hero-container {
 
 main #hero .hero-container .txt-container {
   width: 100vw;
-  margin: 3rem 3rem;
-  margin-top: 5rem;
+  padding: 3rem;
 }
 
 main #hero .hero-container .txt-container h1 {
   font-size: 3rem;
   font-weight: normal;
   width: 90%;
+  margin-bottom: 0.5rem;
 }
 
 main #hero .hero-container .txt-container p {
@@ -101,6 +101,43 @@ main #hero .hero-container .txt-container p {
   font-size: 2rem;
   font-weight: normal;
   color: #fff;
+}
+
+@media (max-width: 769px) {
+  main #hero {
+    height: auto;
+  }
+  main #hero .hero-container {
+    height: 90vh;
+    background: url(./assets/hero-small.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 769px) and (max-width: 650px) {
+  main #hero .hero-container {
+    height: 77vh;
+  }
+}
+
+@media (max-width: 769px) and (max-width: 500px) {
+  main #hero .hero-container {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 769px) and (max-width: 400px) {
+  main #hero .hero-container {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 769px) and (max-width: 300px) {
+  main #hero .hero-container {
+    height: 34vh;
+  }
 }
 
 main #bikes {
@@ -197,6 +234,11 @@ main #bikes .slider-container .bikes-container .bike-container h2 {
   width: max-content;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+main #bikes .slider-container .bikes-container .bike-container h2 small {
+  margin-left: .5em;
+  font-weight: 400;
 }
 
 main #bikes .slider-container .bikes-container .front {
@@ -320,8 +362,8 @@ main #organic .txt-container .eco-container {
 main #organic .txt-container .eco-container .eco {
   -ms-grid-column-align: center;
       justify-self: center;
-  -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: start;
+      align-self: start;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -361,7 +403,7 @@ main #organic .img-container {
 main #organic .img-container .grass-img {
   width: 100vw;
   height: 10rem;
-  background: url(./assets/grass1.jpg);
+  background: url(./assets/grass.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -481,6 +523,7 @@ main #features .feature2 .txt-container .horizontal-line {
 main #challan {
   width: 100vw;
   text-align: center;
+  overflow-x: hidden;
 }
 
 main #challan .headings h1 {
