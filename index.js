@@ -136,7 +136,6 @@ const handleClick = (e) => {
     }, delay);
   }
 };
-
 const bike1 = document.querySelector(
   "#bikes .slider-container .bikes-container .bike-container-1"
 );
@@ -152,12 +151,6 @@ const bike3 = document.querySelector(
 [bike1, bike2, bike3].forEach((item) => {
   item.addEventListener("click", handleClick);
 });
-
-let t = null
-
-t = setInterval(() => {
-  bike3.click()
-}, 3000);
 
 //Handling the forms
 const data = {};
