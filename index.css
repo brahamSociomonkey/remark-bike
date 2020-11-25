@@ -171,149 +171,109 @@ main #bikes .txt-container .btn-container button {
   border-radius: 15px;
 }
 
-main #bikes .slider-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+main #bikes .slider-container .bikes-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
-  width: 100vw;
-  margin: 10rem 0;
+  margin: 0 auto;
+  max-width: 850px;
 }
 
-main #bikes .slider-container .bikes-container {
-  position: relative;
-  padding: 4rem 0;
+main #bikes .slider-container .bikes-container .bike-container-1 {
+  background-image: url(./assets/variants/1.png);
 }
 
-main #bikes .slider-container .bikes-container .bike-container {
-  width: 100%;
-  max-width: 30rem;
-  -webkit-transition: 2s cubic-bezier(0, 1.03, 0.52, 1);
-  transition: 2s cubic-bezier(0, 1.03, 0.52, 1);
-  -webkit-transition-property: -webkit-filter, -webkit-transform;
-  transition-property: -webkit-filter, -webkit-transform;
-  transition-property: filter, transform;
-  transition-property: filter, transform, -webkit-filter, -webkit-transform;
+main #bikes .slider-container .bikes-container .bike-container-2 {
+  background-image: url(./assets/variants/2.png);
 }
 
-main #bikes .slider-container .bikes-container .bike-container .img-container img {
-  -webkit-transition: 1s cubic-bezier(0, 1.03, 0.52, 1);
-  transition: 1s cubic-bezier(0, 1.03, 0.52, 1);
-  -webkit-transition-property: -webkit-filter, -webkit-transform;
-  transition-property: -webkit-filter, -webkit-transform;
-  transition-property: filter, transform;
-  transition-property: filter, transform, -webkit-filter, -webkit-transform;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: auto;
-  width: 25rem;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+main #bikes .slider-container .bikes-container .bike-container-3 {
+  background-image: url(./assets/variants/3.png);
+}
+
+main #bikes .slider-container .bikes-container .bike {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40rem;
+  max-width: 20rem;
+  opacity: 0;
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+  -webkit-transition-property: background;
+  transition-property: background;
   cursor: pointer;
-  z-index: -1;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 
-main #bikes .slider-container .bikes-container .bike-container h2 {
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-  margin-top: 18rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+main #bikes .slider-container .bikes-container .bike .innerHTML {
+  text-align: center;
 }
 
-main #bikes .slider-container .bikes-container .bike-container h2 small {
-  margin-left: .5em;
+main #bikes .slider-container .bikes-container .bike .innerHTML small {
+  margin-left: 0.5em;
   font-weight: 400;
 }
 
-main #bikes .slider-container .bikes-container .front {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  z-index: 10;
+main #bikes .slider-container .bikes-container .big {
+  max-width: none;
+}
+
+main #bikes .slider-container .bikes-container .active {
+  opacity: 1;
 }
 
 main #bikes .slider-container .bikes-container .unactive {
-  pointer-events: none;
-  -webkit-animation: fadeOut 0.2s ease forwards;
-          animation: fadeOut 0.2s ease forwards;
+  opacity: 0;
 }
 
-main #bikes .slider-container .bikes-container .passive {
-  pointer-events: all;
-}
-
-main #bikes .slider-container .bikes-container .l1 {
-  -webkit-transform: translateX(-22rem);
-          transform: translateX(-22rem);
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
-  z-index: 5;
-}
-
-main #bikes .slider-container .bikes-container .r1 {
-  -webkit-transform: translateX(22rem);
-          transform: translateX(22rem);
-  z-index: 5;
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
-}
-
-@media (max-width: 1000px) {
-  main #bikes .slider-container .bikes-container .l1 {
-    -webkit-transform: translateX(-18rem);
-            transform: translateX(-18rem);
-  }
-  main #bikes .slider-container .bikes-container .r1 {
-    -webkit-transform: translateX(18rem);
-            transform: translateX(18rem);
-  }
-}
-
-@media (max-width: 550px) {
-  main #bikes .slider-container .bikes-container .l1 {
-    -webkit-transform: translateX(-14rem);
-            transform: translateX(-14rem);
-  }
-  main #bikes .slider-container .bikes-container .r1 {
-    -webkit-transform: translateX(14rem);
-            transform: translateX(14rem);
-  }
-  main #bikes .slider-container .bikes-container .front {
-    -webkit-transform: scale(1.7);
-            transform: scale(1.7);
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
+@-webkit-keyframes fadeIn {
+  form {
     opacity: 0;
   }
-}
-
-@keyframes fadeOut {
-  from {
+  to {
     opacity: 1;
   }
-  to {
+}
+
+@keyframes fadeIn {
+  form {
     opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -785,10 +745,6 @@ footer .company-info .info + .info {
   }
   main #bikes .txt-container .info p {
     width: 80%;
-  }
-  main #bikes .slider-container {
-    margin: 0;
-    min-height: 75vh;
   }
   main #contact-form form .form-container {
     -ms-flex-wrap: wrap;
