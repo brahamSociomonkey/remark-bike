@@ -212,7 +212,7 @@ main {
           transform: translateY(-5%);
 
           transition: ease 1s;
-          transition-property: background;
+          transition-property: all;
           cursor: pointer;
           display: grid;
           justify-content: center;

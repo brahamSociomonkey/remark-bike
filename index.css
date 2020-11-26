@@ -211,8 +211,8 @@ main #bikes .slider-container .bikes-container .bike {
           transform: translateY(-5%);
   -webkit-transition: ease 1s;
   transition: ease 1s;
-  -webkit-transition-property: background;
-  transition-property: background;
+  -webkit-transition-property: all;
+  transition-property: all;
   cursor: pointer;
   display: -ms-grid;
   display: grid;
