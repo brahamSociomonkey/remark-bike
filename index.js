@@ -103,13 +103,13 @@ const handleClick = (e) => {
     visible([bike1, bike2, bike3], false);
     bike1.style.backgroundImage = `url(./assets/variants/${
       bikeData[position - 1].positon
-    }.png)`;
+    }.webp)`;
     bike1.innerHTML = bikeData[position - 1].innerHtml;
-    bike2.style.backgroundImage = `url(./assets/variants/${bikeData[position].positon}.png)`;
+    bike2.style.backgroundImage = `url(./assets/variants/${bikeData[position].positon}.webp)`;
     bike2.innerHTML = bikeData[position].innerHtml;
     bike3.style.backgroundImage = `url(./assets/variants/${
       bikeData[position + 1].positon
-    }.png)`;
+    }.webp)`;
     bike3.innerHTML = bikeData[position + 1].innerHtml;
 
     setTimeout(() => {
@@ -122,13 +122,13 @@ const handleClick = (e) => {
     visible([bike1, bike2, bike3], false);
     bike1.style.backgroundImage = `url(./assets/variants/${
       bikeData[position - 1].positon
-    }.png)`;
+    }.webp)`;
     bike1.innerHTML = bikeData[position - 1].innerHtml;
-    bike2.style.backgroundImage = `url(./assets/variants/${bikeData[position].positon}.png)`;
+    bike2.style.backgroundImage = `url(./assets/variants/${bikeData[position].positon}.webp)`;
     bike2.innerHTML = bikeData[position].innerHtml;
     bike3.style.backgroundImage = `url(./assets/variants/${
       bikeData[position + 1].positon
-    }.png)`;
+    }.webp)`;
     bike3.innerHTML = bikeData[position + 1].innerHtml;
 
     setTimeout(() => {

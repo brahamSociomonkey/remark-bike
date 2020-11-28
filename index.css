@@ -189,15 +189,15 @@ main #bikes .slider-container .bikes-container {
 }
 
 main #bikes .slider-container .bikes-container .bike-container-1 {
-  background-image: url(./assets/variants/1.png);
+  background-image: url(./assets/variants/1.webp);
 }
 
 main #bikes .slider-container .bikes-container .bike-container-2 {
-  background-image: url(./assets/variants/7.png);
+  background-image: url(./assets/variants/7.webp);
 }
 
 main #bikes .slider-container .bikes-container .bike-container-3 {
-  background-image: url(./assets/variants/9.png);
+  background-image: url(./assets/variants/9.webp);
 }
 
 main #bikes .slider-container .bikes-container .bike {
@@ -726,6 +726,18 @@ footer .company-info .info + .info {
 @media (max-width: 800px) {
   html {
     font-size: 80%;
+  }
+  header .logo-container .logo {
+    width: 60px;
+    height: 60px;
+  }
+  main #hero .hero-container .txt-container {
+    line-height: 1.3;
+  }
+  main #hero .hero-container .txt-container h1,
+  main #hero .hero-container .txt-container p {
+    margin-bottom: 0;
+    margin-top: 0;
   }
   #challan .img-container .icons-container {
     width: 10rem;
